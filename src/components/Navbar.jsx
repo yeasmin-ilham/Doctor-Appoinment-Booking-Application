@@ -11,8 +11,8 @@ const Navbar = () => {
   return (
     <div className='flex flex-row justify-between items-center text-sm  py-5 mb-5 '> 
         <div className='flex items-center gap-2 text-xl italic font-bold'>
-          <img src={logo} width={44} height={44} className='cursor-pointer'/>
-          <p>Doctor's <span className='text-green-600'>Point</span></p>
+          <img onClick={() => navigate('/')} src={logo} width={42} height={42} className='cursor-pointer'/>
+          <p className='cursor-pointer' onClick={() => navigate('/')}>Doctor's <span className='text-sky-500'>Point</span></p>
         </div>
         <ul className='hidden md:flex items-center gap-8 font-medium'>
           <NavLink to='/'><li className='py-1 hover:text-cyan-500 hover:scale-110 transition-all'>Home</li></NavLink>
@@ -24,7 +24,13 @@ const Navbar = () => {
           {token ? (<div className='cursor-pointer group relative'>
            <img src={profile} className='w-8 rounded-full'/>
           
-          
+          <div className='absolute top-0 right-0 pt-14 text-base font-semibold text-gray-800  z-20 hidden group-hover:block'>
+            <div className='min-w-48 bg-stone-50 shadow-md rounded flex flex-col gap-1 p-4'>
+              <p onClick={() => navigate('my-profile')} className='hover:text-black hover:bg-gray-200 pl-2 py-1 transition-all rounded-md cursor-pointer'>My Profile</p> <hr className='text-gray-400'/>
+              <p onClick={() => navigate('my-appointments')} className='hover:text-black  hover:bg-gray-200 pl-2 py-1 transition-all rounded-md cursor-pointer'>My Appoinment</p> <hr className='text-gray-400'/>
+              <p onClick={() => settoken(false)} className='hover:text-black  hover:bg-gray-200 pl-2 py-1 transition-all rounded-md cursor-pointer' >Logout</p> <hr className='text-gray-400'/>
+            </div>
+          </div>
           </div>) : (<button onClick={() => navigate('/login')} className='bg-cyan-600 active:bg-cyan-500  hover:scale-105 transition-all text-white px-6 py-2.5 rounded-full font-light hidden md:block'>Create Account</button>)}
           </div>
     </div>
