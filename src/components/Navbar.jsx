@@ -24,11 +24,11 @@ const Navbar = () => {
           {token ? (<div className='cursor-pointer group relative'>
            <img src={profile} className='w-8 rounded-full'/>
           
-          <div className='absolute top-0 right-0 pt-14 text-base font-semibold text-gray-800  z-20 hidden group-hover:block'>
-            <div className='min-w-48 bg-stone-50 shadow-md rounded flex flex-col gap-1 p-4'>
-              <p onClick={() => navigate('my-profile')} className='hover:text-black hover:bg-gray-200 pl-2 py-1 transition-all rounded-md cursor-pointer'>My Profile</p> <hr className='text-gray-400'/>
-              <p onClick={() => navigate('my-appointments')} className='hover:text-black  hover:bg-gray-200 pl-2 py-1 transition-all rounded-md cursor-pointer'>My Appoinment</p> <hr className='text-gray-400'/>
-              <p onClick={() => settoken(false)} className='hover:text-black  hover:bg-gray-200 pl-2 py-1 transition-all rounded-md cursor-pointer' >Logout</p> <hr className='text-gray-400'/>
+          <div className='absolute top-0 right-0 pt-14 text-base font-semibold text-gray-700  z-20 hidden group-hover:block'>
+            <div className='min-w-48 shadow-lg rounded flex flex-col gap-1 p-4'>
+              <p onClick={() => navigate('my-profile')} className='hover:text-black hover:bg-gray-100 pl-2 py-1 transition-all rounded-md cursor-pointer'>My Profile</p> <hr className='text-gray-400'/>
+              <p onClick={() => navigate('my-appointments')} className='hover:text-black  hover:bg-gray-100 pl-2 py-1 transition-all rounded-md cursor-pointer'>My Appoinment</p> <hr className='text-gray-400'/>
+              <p onClick={() => settoken(false)} className='hover:text-black  hover:bg-gray-100 pl-2 py-1 transition-all rounded-md cursor-pointer' >Logout</p> <hr className='text-gray-400'/>
             </div>
           </div>
           </div>) : (<button onClick={() => navigate('/login')} className='bg-cyan-600 active:bg-cyan-500  hover:scale-105 transition-all text-white px-6 py-2.5 rounded-full font-light hidden md:block'>Create Account</button>)}
