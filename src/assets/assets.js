@@ -46,61 +46,75 @@ export const specialityData= [
 
 
 export const DoctorInfo = [
-   {  image:doc1,
+
+   {  _id:'doc1',
+      image:doc1,
       active:'Available',
       name:'Dr. Richard James',
-      speciality:'General physician'
+      speciality:'General physician',
+      degree:'MBBS',
+      experience:'4 Years',
+      about:''
       
    },
    {  image:doc2,
+      _id:'doc2',
       active:'Available',
       name:'Dr. Emily Larson',
       speciality:'Gynecologist'
       
    },
    {  image:doc3,
+      _id:'doc3',
       active:'Available',
       name:'Dr. Richard James',
       speciality:'Dermatologist'
       
    },
    {  image:doc4,
+      _id:'doc4',
       active:'Available',
       name:'Dr. Sarah Patel',
       speciality:'General physician'
       
    },
    {  image:doc5,
+      _id:'doc5',
       active:'Available',
       name:'Dr. Christopher Lee',
       speciality:'Pediatricians'
       
    },
    {  image: doc6,
+      _id:'doc6',
       active:'Available',
       name:'Dr. Jennifer Garcia',
       speciality:'Neurologist'
       
    },
    {  image: doc7,
+      _id:'doc7',
       active:'Available',
       name:'Dr. Andrew Williams',
       speciality:'Gastroenterologist'
       
    },
    {  image: doc8,
+      _id:'doc8',
       active:'Available',
       name:'Dr. Christopher',
       speciality:'Gastroenterologist'
       
    },
    {  image: doc9,
+      _id:'doc9',
       active:'Available',
       name:'Dr. Timothy White',
       speciality:'Gynecologist'
       
    },
    {  image: doc10,
+      _id:'doc10',
       active:'Available',
       name:'Dr. Ava Mitchell',
       speciality:'Dermatologist'

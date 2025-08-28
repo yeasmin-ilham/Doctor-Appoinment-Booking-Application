@@ -13,7 +13,7 @@ const Speciallity = () => {
         <div className='flex sm:justify-center gap-4 pt-5 w-full overflow-hidden'>
           {specialityData.map((data, index) => (
          <Link key={index} to={`/doctors/${data.speciality}`}
-         className='flex flex-col items-center text-xs cursor-pointer shrink-0 hover:translate-y-[-10px] transition-all'>
+         className='flex flex-col items-center text-xs cursor-pointer shrink hover:translate-y-[-10px] transition-all'>
 
         <img src={data.image} alt='' className='w-16 sm:w-24 mb-2'/>
        <p>{data.speciality}</p>

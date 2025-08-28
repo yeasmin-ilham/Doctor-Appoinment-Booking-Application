@@ -1,23 +1,33 @@
 import React from 'react'
 import {DoctorInfo } from '../assets/assets.js'
+import { useNavigate } from 'react-router-dom'
 
 const TopDoctor = () => {
+
+  const navigate = useNavigate();
+  
   return (
-    <div>
-        <h1>Top Doctors to Book</h1> 
-        <p>Simply browse through our extensive list of trusted doctors.</p>
-        
-            {DoctorInfo.map((data, index) =>(
-             <div key={index} className=''>
-            <div className='bg-cyan-500'>
-                 <img src={data.image} className='w-55'/>
-                 <p>{data.active}</p>
-                <p>{data.name}</p>
-                <p>{data.speciality}</p>
-            </div>
+    <div className='flex flex-col items-center gap-4 my-12 text-gray-900 md:mx-10'>
+        <h1 className='text-3xl font-medium '>Top Doctors to Book</h1> 
+        <p className='sm:w-1/3 text-center text-sm '>Simply browse through our extensive list of trusted doctors.</p>
+              
+          <div className='w-full grid grid-cols-2 sm:grid-cols-4 flex-wrap gap-4 pt-5 space-y-6 px-3 sm:px-0'>
+               {DoctorInfo.slice(0,10).map((data, index) =>(
+             <div onClick={()=> navigate(`/appoinment/${data._id}`)} key={index} className='border border-blue-200 rounded-xl overflow-hidden cursor-pointer  hover:translate-y-[-15px] hover:bg-blue-200 transition-all duration-500 '>
+                 <img src={data.image} className='w-[200px] bg-blue-50 rounded-lg '/>
+             <div className='p-4'>
+                <div className='flex items-center gap-2 text-green-500 text-sm text-center '>
+                   <p className='w-2 h-2 bg-green-500 rounded-full'></p> 
+                   <p >{data.active}</p>
+                </div>
+                <p className='text-gray-900 text-lg font-medium '>{data.name}</p>
+                <p className='text-gray-600 text-sm'>{data.speciality}</p>
              </div>
+            </div> 
             ))}
-        
+      
+          </div>
+              <button>More</button>
     </div>
   )
 }
