@@ -12,7 +12,7 @@ const TopDoctor = () => {
         <p className='sm:w-1/3 text-center text-sm '>Simply browse through our extensive list of trusted doctors.</p>
               
           <div className='w-full grid grid-cols-2 sm:grid-cols-4 flex-wrap gap-4 pt-5 space-y-6 px-3 sm:px-0'>
-               {DoctorInfo.slice(0,10).map((data, index) =>(
+               {DoctorInfo.slice(0,8).map((data, index) =>(
              <div onClick={()=> navigate(`/appoinment/${data._id}`)} key={index} className='border border-blue-200 rounded-xl overflow-hidden cursor-pointer  hover:translate-y-[-15px] hover:bg-blue-200 transition-all duration-500 '>
                  <img src={data.image} className='w-[200px] bg-blue-50 rounded-lg '/>
              <div className='p-4'>
@@ -27,7 +27,7 @@ const TopDoctor = () => {
             ))}
       
           </div>
-              <button onClick={() => {navigate('/doctors'); scrollTo(0 , 0)}}className='border py-2 px-7 rounded-lg mt-5 bg-cyan-800 text-white hover:bg-cyan-600 hover:scale-105 transition-all duration-300'>More</button>
+              <button onClick={() => {navigate('/doctors'); scrollTo(0 , 0)}}className='border py-2 px-7 cursor-pointer rounded-lg mt-5 bg-blue-800 text-white hover:bg-blue-500 hover:scale-105 transition-all duration-300'>More</button>
     </div>
   )
 }
